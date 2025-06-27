@@ -35,7 +35,7 @@ const LandingPage = () => {
       description: "Advanced encryption and multi-signature protection"
     },
     {
-      icon: <Zap className="h-6 w-6 text-accent-500" />,
+      icon: <Zap className="h-6 w-6 text-accent" />,
       title: "Instant Settlements",
       description: "Real-time processing with instant confirmations"
     },
@@ -300,7 +300,7 @@ const LandingPage = () => {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <Card className="p-6 bg-gradient-to-br from-primary-50 to-purple-50 border-primary-200">
+              <Card className="p-6 bg-gradient-to-br from-primary-50 to-accent-50 border-primary-200">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-lg font-semibold text-gray-900">Transaction Overview</h3>
                   <div className="flex items-center space-x-2 text-success">
