@@ -12,33 +12,33 @@
     --card-foreground: 15 23 42;
     --popover: 255 255 255;
     --popover-foreground: 15 23 42;
-    --primary: 59 130 246; /* Blue #3B82F6 */
+    --primary: 75 101 255; /* BitPay blue #4B65FF */
     --primary-foreground: 255 255 255;
-    --secondary: 16 185 129; /* Green #10B981 */
+    --secondary: 34 197 94; /* Clean green #22C55E */
     --secondary-foreground: 255 255 255;
-    --accent: 245 158 11; /* Orange #F59E0B */
+    --accent: 139 92 246; /* Purple #8B5CF6 instead of orange */
     --accent-foreground: 255 255 255;
-    --muted: 241 245 249;
+    --muted: 248 250 252;
     --muted-foreground: 100 116 139;
     --destructive: 239 68 68;
     --destructive-foreground: 255 255 255;
     --border: 226 232 240;
     --input: 226 232 240;
-    --ring: 59 130 246;
+    --ring: 75 101 255;
     --radius: 0.75rem;
-    --chart-1: 59 130 246;
-    --chart-2: 16 185 129;
-    --chart-3: 245 158 11;
-    --chart-4: 139 92 246;
+    --chart-1: 75 101 255;
+    --chart-2: 34 197 94;
+    --chart-3: 139 92 246;
+    --chart-4: 168 85 247;
     --chart-5: 236 72 153;
     --sidebar-background: 248 250 252;
     --sidebar-foreground: 51 65 85;
-    --sidebar-primary: 59 130 246;
+    --sidebar-primary: 75 101 255;
     --sidebar-primary-foreground: 255 255 255;
     --sidebar-accent: 241 245 249;
     --sidebar-accent-foreground: 51 65 85;
     --sidebar-border: 226 232 240;
-    --sidebar-ring: 59 130 246;
+    --sidebar-ring: 75 101 255;
   }
   
   .dark {
@@ -48,11 +48,11 @@
     --card-foreground: 248 250 252;
     --popover: 15 23 42;
     --popover-foreground: 248 250 252;
-    --primary: 59 130 246;
+    --primary: 75 101 255;
     --primary-foreground: 255 255 255;
-    --secondary: 16 185 129;
+    --secondary: 34 197 94;
     --secondary-foreground: 255 255 255;
-    --accent: 245 158 11;
+    --accent: 139 92 246;
     --accent-foreground: 255 255 255;
     --muted: 30 41 59;
     --muted-foreground: 148 163 184;
@@ -60,27 +60,39 @@
     --destructive-foreground: 255 255 255;
     --border: 30 41 59;
     --input: 30 41 59;
-    --ring: 59 130 246;
-    --chart-1: 59 130 246;
-    --chart-2: 16 185 129;
-    --chart-3: 245 158 11;
-    --chart-4: 139 92 246;
+    --ring: 75 101 255;
+    --chart-1: 75 101 255;
+    --chart-2: 34 197 94;
+    --chart-3: 139 92 246;
+    --chart-4: 168 85 247;
     --chart-5: 236 72 153;
     --sidebar-background: 15 23 42;
     --sidebar-foreground: 203 213 225;
-    --sidebar-primary: 59 130 246;
+    --sidebar-primary: 75 101 255;
     --sidebar-primary-foreground: 255 255 255;
     --sidebar-accent: 30 41 59;
     --sidebar-accent-foreground: 203 213 225;
     --sidebar-border: 30 41 59;
-    --sidebar-ring: 59 130 246;
+    --sidebar-ring: 75 101 255;
   }
 }
+
 @layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Better focus states */
+  :focus-visible {
+    @apply ring-2 ring-primary ring-offset-2 ring-offset-background;
   }
 }
